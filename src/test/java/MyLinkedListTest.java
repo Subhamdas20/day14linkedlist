@@ -11,12 +11,12 @@ public class MyLinkedListTest {
         MyNode<Integer>  myThirdNode = new MyNode(70);
         MyLinkedList myLinkedList = new MyLinkedList();
         myLinkedList.append(myFirstNode);
+        myLinkedList.append(mySecondNode);
         myLinkedList.append(myThirdNode);
-        myLinkedList.insert(myFirstNode,mySecondNode);
-        myLinkedList.pop();
+        myLinkedList.popLast();
         myLinkedList.printNodes();
-        boolean result = myLinkedList.head.equals(mySecondNode)
-                && myLinkedList.tail.equals(myThirdNode);
+        boolean result = myLinkedList.head.equals(myFirstNode)
+                && myLinkedList.tail.equals(mySecondNode);
         Assert.assertTrue(result);
     }
 }
