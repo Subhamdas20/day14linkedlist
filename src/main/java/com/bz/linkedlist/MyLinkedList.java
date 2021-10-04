@@ -1,9 +1,7 @@
 package com.bz.linkedlist;
-
 public class MyLinkedList<T>  {
     public INode tail;
     public INode head;
-
     public MyLinkedList() {
         this.head = null;
         this.tail = null;
@@ -69,7 +67,7 @@ public class MyLinkedList<T>  {
         while (!tempNode.getNext().equals(tail)){
             tempNode = tempNode.getNext();
             if(tempNode.getKey()==keySearched){
-                System.out.println("Found node with key : "+keySearched);
+//                System.out.println("Found node with key : "+keySearched);
                 temp=tempNode;
             }
         }
@@ -77,6 +75,26 @@ public class MyLinkedList<T>  {
         tempInsert.setKey(keyToInsert.getKey());
         temp.setNext(tempInsert);
         return tempInsert;
+    }
+    public INode delete(INode node){
+        INode tempNode = this.head;
+        INode temp = null;
+        while (!tempNode.getNext().equals(node)) {
+            tempNode = tempNode.getNext();
+                temp=tempNode;
+        }
+       temp.setNext(node.getNext());
+        return temp.getNext();
+    }
+    public void size(INode node){
+        INode tempNode = this.head;
+        int size=1;
+        while (!tempNode.getNext().equals(node)) {
+            tempNode = tempNode.getNext();
+           size=size+1;
+        }
+        System.out.println(size+1);
+
     }
     public void printNodes(){
         StringBuffer myNodes = new StringBuffer("My Nodes : ");
@@ -89,5 +107,5 @@ public class MyLinkedList<T>  {
         myNodes.append(tempNode.getKey());
         System.out.println(myNodes);
     }
-
 }
+

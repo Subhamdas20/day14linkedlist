@@ -15,8 +15,18 @@ public class MyLinkedListTest {
         myLinkedList.append(myFirstNode);
         myLinkedList.append(mySecondNode);
         myLinkedList.append(myThirdNode);
-        INode node = myLinkedList.searchAndInsert(30,myForthNode);
+         myLinkedList.searchAndInsert(30,myForthNode);
+
         myLinkedList.printNodes();
-        Assert.assertEquals(node , myForthNode);
+        myLinkedList.delete(myForthNode);
+        System.out.print("LinkedList after deleting element 40 is : ");
+        myLinkedList.printNodes();
+        System.out.print("Size of linkedList is: ");
+        myLinkedList.size(myThirdNode);
+
+        Boolean result =  myLinkedList.head.equals(myFirstNode) &&
+                myLinkedList.head.getNext().equals(mySecondNode)
+                && myLinkedList.tail.equals(myThirdNode);
+        Assert.assertTrue(result);
     }
 }
