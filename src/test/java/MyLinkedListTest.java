@@ -10,12 +10,13 @@ public class MyLinkedListTest {
         MyNode<Integer>  myFirstNode = new MyNode(56);
         MyNode<Integer> mySecondNode = new MyNode(30);
         MyNode<Integer>  myThirdNode = new MyNode(70);
+        MyNode<Integer>  myForthNode = new MyNode(40);
         MyLinkedList myLinkedList = new MyLinkedList();
         myLinkedList.append(myFirstNode);
         myLinkedList.append(mySecondNode);
         myLinkedList.append(myThirdNode);
+        INode node = myLinkedList.searchAndInsert(30,myForthNode);
         myLinkedList.printNodes();
-        INode node = myLinkedList.findNode(30);
-        Assert.assertEquals(node , mySecondNode);
+        Assert.assertEquals(node , myForthNode);
     }
 }
