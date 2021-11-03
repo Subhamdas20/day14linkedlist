@@ -1,5 +1,5 @@
 package com.bz.linkedlist;
-public class MyLinkedList<T>  {
+public class MyLinkedList<T >  {
     public INode tail;
     public INode head;
     public MyLinkedList() {
@@ -67,7 +67,6 @@ public class MyLinkedList<T>  {
         while (!tempNode.getNext().equals(tail)){
             tempNode = tempNode.getNext();
             if(tempNode.getKey()==keySearched){
-//                System.out.println("Found node with key : "+keySearched);
                 temp=tempNode;
             }
         }
@@ -96,6 +95,7 @@ public class MyLinkedList<T>  {
         System.out.println(size+1);
 
     }
+
     public void printNodes(){
         StringBuffer myNodes = new StringBuffer("My Nodes : ");
         INode tempNode = head ;
