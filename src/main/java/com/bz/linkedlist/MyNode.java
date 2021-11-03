@@ -1,7 +1,7 @@
 package com.bz.linkedlist;
 
-public class MyNode <T>{
-    private  MyNode next;
+public class MyNode<T> {
+    private MyNode next;
     private T key;
 
     public MyNode getNext() {
@@ -11,7 +11,6 @@ public class MyNode <T>{
     public void setNext(MyNode next) {
         this.next = next;
     }
-
 
     public MyNode(int key) {
         this.key = null;
