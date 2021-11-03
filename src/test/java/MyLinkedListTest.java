@@ -15,7 +15,7 @@ public class MyLinkedListTest {
         myLinkedList.append(mySecondNode);
         myLinkedList.append(myThirdNode);
         myLinkedList.printNodes();
-        INode node = myLinkedList.findNode(30);
+        INode node = myLinkedList.findNode(mySecondNode);
         Assert.assertEquals(node , mySecondNode);
     }
 }

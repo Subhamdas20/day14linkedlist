@@ -50,15 +50,16 @@ public class MyLinkedList<T>  {
         tempNode = tempNode.getNext();
         return tempNode;
     }
-    public  INode findNode(T key){
+    public  INode findNode(MyNode myNode){
         INode tempNode = this.head;
         INode temp = null;
         while (!tempNode.getNext().equals(tail)){
-            tempNode = tempNode.getNext();
-            if(tempNode.getKey()==key){
-                System.out.println("Found node with key : "+key);
-                temp=tempNode;
+
+            if(tempNode.getNext()==myNode){
+                System.out.println("Found node with key : "+myNode.getKey());
+                temp=myNode;
             }
+            return temp;
         }
         return temp;
     }
